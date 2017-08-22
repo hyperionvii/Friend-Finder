@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Reservation Page</title>
+  <title>Find a Friend!</title>
 
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </head>
@@ -28,42 +28,137 @@
     <div class="row">
       <div class="col-lg-12">
 
-        <!-- Reservation Page -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">Survey</h4>
+            <h3 class="panel-title text-center"><strong>Survey</strong></h3>
           </div>
           <div class="panel-body">
 
+          <form>
+            <div class="form-group">
+              <label class="form-control-label" for="formGroup">Full Name (required) </label>
+              <input type="text" class="form-control" id="Name" placeholder="Sparkle Princess">
+            </div>
+          <div class="form-group">
+            <label class="form-control-label" for="formGroupExampleInput2">Link to Image (required)</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Don't Fret, You Look Awesome">
+          </div>
+        </form>
+
           <h3> <strong> Question 1 </strong> </h3>
 
-          <h4> Question goes here </h4>
-          <select data-placeholder= "" class = "chosen-select" id = "q1">
-            <option value=""></option> 
+          <h4> You are quick to jump to conclusions! </h4>
+          <select data-question= "" class = "chosen-select" id = "q1">
             <option value="1"> 1 (strongly disagree) </option>
             <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 (strongly agree) </option>
           </select>
 
           <h3> <strong> Question 2 </strong> </h3>
 
-          <h4> Question goes here </h4>
-          <select data-placeholder= "" class = "chosen-select" id = "q1">
-            <option value=""></option> 
+          <h4> You have a logical approach to everything you do. </h4>
+          <select data-question= "" class = "chosen-select" id = "q2">
             <option value="1"> 1 (strongly disagree) </option>
             <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 (strongly agree) </option>
           </select>
 
           <h3> <strong> Question 3 </strong> </h3>
 
-          <h4> Question goes here </h4>
-          <select data-placeholder= "" class = "chosen-select" id = "q1">
-            <option value=""></option> 
+          <h4> You are a day dreamer! </h4>
+          <select data-question= "" class = "chosen-select" id = "q3">
             <option value="1"> 1 (strongly disagree) </option>
             <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 (strongly agree) </option>
+          </select>
+
+          <h3> <strong> Question 4 </strong> </h3>
+
+          <h4> You often imagine yourself exploring the galaxy. </h4>
+          <select data-question= "" class = "chosen-select" id = "q4">
+            <option value="1"> 1 (strongly disagree) </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 (strongly agree) </option>
+          </select>
+
+          <h3> <strong> Question 5 </strong> </h3>
+
+          <h4> You love tea. (Especially hot tea. Earl Grey.) </h4>
+          <select data-question= "" class = "chosen-select" id = "q5">
+            <option value="1"> 1 (strongly disagree) </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 (strongly agree) </option>
+          </select>
+
+          <h3> <strong> Question 6 </strong> </h3>
+
+          <h4> You are always the gentleman. </h4>
+          <select data-question= "" class = "chosen-select" id = "q6">
+            <option value="1"> 1 (strongly disagree) </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 (strongly agree) </option>
+          </select>
+
+          <h3> <strong> Question 7 </strong> </h3>
+
+          <h4> You are a bit hot tempered. </h4>
+          <select data-question= "" class = "chosen-select" id = "q7">
+            <option value="1"> 1 (strongly disagree) </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 (strongly agree) </option>
+          </select>
+
+          <h3> <strong> Question 8 </strong> </h3>
+
+          <h4> You have a nack for understanding people. </h4>
+          <select data-question= "" class = "chosen-select" id = "q8">
+            <option value="1"> 1 (strongly disagree) </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 (strongly agree) </option>
+          </select>
+
+          <h3> <strong> Question 9 </strong> </h3>
+
+          <h4> You are just increadibly smart! </h4>
+          <select data-question= "" class = "chosen-select" id = "q9">
+            <option value="1"> 1 (strongly disagree) </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 (strongly agree) </option>
+          </select>
+
+          <h3> <strong> Question 10 </strong> </h3>
+
+          <h4> You love the classics. </h4>
+          <select data-question= "" class = "chosen-select" id = "q10">
+            <option value="1"> 1 (strongly disagree) </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 (strongly agree) </option>
           </select>
 
           </div>
         </div>
+        
+          <a class="btn btn-primary btn-lg btn-block submit" href="#" role="button"> Submit </a>
 
       </div>
     </div>
@@ -92,41 +187,47 @@
       event.preventDefault();
 
       // Here we grab the form elements
-      var newReservation = {
-        customerName: $("#reserve-name").val().trim(),
-        phoneNumber: $("#reserve-phone").val().trim(),
-        customerEmail: $("#reserve-email").val().trim(),
-        customerID: $("#reserve-unique-id").val().trim()
+      var surveyResults = {
+        Name: $("#name").val(),
+        LinkToPicture: $("#linkToPicture").val(),
+        surveyResults: [ $('#q1').val(), 
+        $('#q2').val(),
+        $('#q3').val(),
+        $('#q4').val(),
+        $('#q5').val(),
+        $('#q6').val(),
+        $('#q7').val(),
+        $('#q8').val(),
+        $('#q9').val(),
+        $('#q10').val()
+        ]
       };
 
-      console.log(newReservation);
+      console.log(surveyResults);
+  });
 
       // This line is the magic. It"s very similar to the standard ajax function we used.
       // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
       // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
       // depending on if a tables is available or not.
 
-      $.post("/api/tables", newReservation,
+      $.post("/api/survey", newReservation,
         function(data) {
 
-          // If a table is available... tell user they are booked.
-          if (data) {
-            alert("Yay! You are officially booked!");
-          }
+          //save the data so that you can 
 
-          // If a table is available... tell user they on the waiting list.
-          else {
-            alert("Sorry you are on the wait list");
-          }
+    //       // If a table is available... tell user they are booked.
+    //       if (data) {
+    //         alert("Yay! You are officially booked!");
+    //       }
 
-          // Clear the form when submitting
-          $("#reserve-name").val("");
-          $("#reserve-phone").val("");
-          $("#reserve-email").val("");
-          $("#reserve-unique-id").val("");
+    //       // If a table is available... tell user they on the waiting list.
+    //       else {
+    //         alert("Sorry you are on the wait list");
+    //       }
 
-        });
+    //     });
 
-    });
+    // });
 
 </script>
