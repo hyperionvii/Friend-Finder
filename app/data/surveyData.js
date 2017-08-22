@@ -1,18 +1,31 @@
-// ===============================================================================
-// DATA
-// Below data will hold all of the reserved tables.
-// Initially we just set it equal to a "dummy" customer.
-// But you could have it be an empty array as well.
-// ===============================================================================
+var surveyData = [{
+	name: "Jean-Luc Picard",
+    linkToPicture: "https://www.chaostrophic.com/wp-content/uploads/2017/03/47ba21ca9b5cf73389f4398f382638211.jpg",
+    surveyResults: [ 1, 
+        2,
+        3,
+        4,
+        5,
+        5,
+        1,
+        2,
+        3,
+        4]
+    },
+    {
+    name: "William Riker",
+    linkToPicture: "http://cdn.collider.com/wp-content/uploads/star-trek-next-generation-jonathan-frakes.jpg",
+    surveyResults: [ 1, 
+        2,
+        3,
+        4,
+        5,
+        5,
+        1,
+        2,
+        3,
+        4]
+      }
+    ];
 
-var tableArray = [
-  {
-    customerName: "Ahmed",
-    customerEmail: "ahmed@example.com",
-    customerID: "afhaque89",
-    phoneNumber: "000-000-0000"
-  }
-];
-
-// Note how we export the array. This makes it accessible to other files using require.
-module.exports = tableArray;
+module.exports = surveyData;

@@ -1,34 +1,15 @@
-// ===============================================================================
-// LOAD DATA
-// We are linking our routes to a series of "data" sources.
-// These data sources hold arrays of information on table-data, waitinglist, etc.
-// ===============================================================================
 
-// var tableData = require("../data/tableData");
-// var waitListData = require("../data/waitinglistData");
+var surveyData = require("../data/surveyData.js");
 
+module.exports = function(app) {
 
-// // ===============================================================================
-// // ROUTING
-// // ===============================================================================
+  app.get("/api/surveyData", function(req, res) {
+    res.json(surveyData);
+  });
 
-// module.exports = function(app) {
-  
-
-//   app.get("/api/tables", function(req, res) {
- 
-//   });
-
-//   app.get("/api/waitlist", function(req, res) {
-
+//set it up to see who the friends are!
+//   app.post("/api/surveyData", function(req, res) {
 //   });
 
 
-//   app.post("/api/tables", function(req, res) {
-//   });
-
-
-//   app.post("/api/clear", function() {
-
-//   });
-// };
+};
