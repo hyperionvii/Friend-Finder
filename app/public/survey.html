@@ -36,12 +36,12 @@
 
           <form>
             <div class="form-group">
-              <label class="form-control-label" for="formGroup">Full Name (required) </label>
-              <input type="text" class="form-control" id="Name" placeholder="Sparkle Princess">
+              <label class="form-control-label" for="formGroup"> Full Name (required) </label>
+              <input type="text" class="form-control" id="name" placeholder="Sparkle Princess">
             </div>
           <div class="form-group">
             <label class="form-control-label" for="formGroupExampleInput2">Link to Image (required)</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Don't Fret, You Look Awesome">
+            <input type="text" class="form-control" id="linkToImage" placeholder="Don't Fret, You Look Awesome">
           </div>
         </form>
 
@@ -188,8 +188,8 @@
 
       // Here we grab the form elements
       var surveyResults = {
-        Name: $("#name").val(),
-        LinkToPicture: $("#linkToPicture").val(),
+        name: $("#name").val(),
+        linkToPicture: $("#linkToPicture").val(),
         surveyResults: [ $('#q1').val(), 
         $('#q2').val(),
         $('#q3').val(),
@@ -206,27 +206,20 @@
       console.log(surveyResults);
   });
 
-      // This line is the magic. It"s very similar to the standard ajax function we used.
-      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-      // depending on if a tables is available or not.
 
-      $.post("/api/survey", newReservation,
-        function(data) {
+      // $.post("/api/survey", newReservation,
+      //   function(data) {
 
-          //save the data so that you can 
 
-    //       // If a table is available... tell user they are booked.
-    //       if (data) {
-    //         alert("Yay! You are officially booked!");
-    //       }
+      //   if ($('#name') == false  && $('#linkToImage') == false) {
+      //     alert("Please provide your name and link to image")
+      //   } else {
+      //     surveyFunction();
+      //   }
 
-    //       // If a table is available... tell user they on the waiting list.
-    //       else {
-    //         alert("Sorry you are on the wait list");
-    //       }
-
-    //     });
+      //   function surveyFunction() {
+      //     // function information that takes all the information provided and compares it against all the existing information. 
+      //   }
 
     // });
 
