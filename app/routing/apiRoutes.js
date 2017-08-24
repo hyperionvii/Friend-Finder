@@ -12,41 +12,30 @@ module.exports = function(app) {
     var surveyMatch =  
     { name: "",
     linkToPicture: "",
-    surveyResults: compatScore
+    difference: 1000
     };
 
-    // loop through all the friends in the survey list
+    var userData = req.body;
+    var userScore = userData.score;
 
-      //as you are looping through, compare the new survey answers to the answers in the surveyData
+    var totalDifference = 0;
 
 
     for(var i = 0; i <= surveyData.length; i++) {
-      surveyData[i]
-      var compatCount;
-      console.log(surveyData.length)
 
       for(var e = 0; e < surveyData[i].surveyResults[e]; e++){
 
-        var set = surveyMatch.surveyResults[e];
+        totalDifference += Math.abs(parseInt(userScore[e])) - parseInt(surveyData[i].surveyResults[e]);
 
-        if(surveyMatch.surveyResults[e] == surveyData[i].surveyResults[e]) {
-          var count;
-          compatCount = [];
-          count++;
+        if (totalDifference <= surveyMatch.difference) {
 
-          console.log(surveyMatch.surveyResults[e]);
-
-          if( set == surveyMatch.surveyResults[e]) {
-            highestNumber.push(count);
-          };
+          surveyMatch.name = surveyData[i].name;
+          surveyMatch.photo = surveyData[i].photo;
+          surveyMatch.difference = totalDifference;
         };
       };
+    };
 
-      var max = compatCount.indexOf(Math.max(compatCount));
-    }
-
-    surveyMatch.push(surveyData);
-  });
-
-
-};
+    surveyData.push(userData);
+    res.json(surveyMatch);
+  };
