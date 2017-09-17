@@ -16,16 +16,25 @@ module.exports = function(app) {
     };
 
     var userData = req.body;
-    var userScore = userData.score;
+    var userScore = userData.surveyResults;
 
     var totalDifference = 0;
 
+    // console.log(req.body);
 
-    for(var i = 0; i <= surveyData.length; i++) {
 
-      for(var e = 0; e < surveyData[i].surveyResults[e]; e++){
+    for(var i = 0; i < surveyData.length; i++) {
+
+      console.log(surveyData[i]);
+
+      for(var e = 0; e < surveyData[i].surveyResults[e]; e++) {
+
+        // console.log(userScore);
+        // console.log(surveyData);
 
         totalDifference += Math.abs(parseInt(userScore[e])) - parseInt(surveyData[i].surveyResults[e]);
+
+
 
         if (totalDifference <= surveyMatch.difference) {
 
@@ -38,4 +47,5 @@ module.exports = function(app) {
 
     surveyData.push(userData);
     res.json(surveyMatch);
-  };
+  });
+};
